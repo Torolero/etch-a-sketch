@@ -17,9 +17,13 @@ body {
 }
 
 .column {
-    background-color: blue;
+    background-color: lightgray;
     padding: 1rem 0;
     flex: 1;
     margin-bottom: 5px;
+}
+
+.hoverColumn {
+    background-color: lightcoral;
 }
 

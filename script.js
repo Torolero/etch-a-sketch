@@ -12,6 +12,14 @@ const column = document.createElement("div");
 row.appendChild(column);
 column.classList.add("column");
 column.textContent = "column";
+
+column.addEventListener('mouseenter', (event) => {
+    column.classList.add("hoverColumn");
+    
+    column.addEventListener('mouseleave', (event) => {
+        column.classList.remove("hoverColumn");
+    });
+});
 }
 }
 
