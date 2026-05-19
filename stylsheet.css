@@ -1,3 +1,25 @@
 /*Use Flexbox to make divs appear as a grid vs a column*/
 
 /*Watchout for borders & margins that will modify size of squares*/
+body {
+    text-align: center;
+}
+
+#container {
+    /* background-color: lightcoral; */
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+}
+
+.column {
+    background-color: blue;
+    padding: 1rem 0;
+    flex: 1;
+    margin-bottom: 5px;
+}
+
