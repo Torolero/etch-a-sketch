@@ -1,5 +1,6 @@
 /*Create divs with js to go inside div with ID "container" */
 const body = document.querySelector("body");
+
 const  button = document.createElement("button");
 body.prepend(button);
 button.textContent = "Click Me!!";
@@ -14,33 +15,37 @@ button.addEventListener('mouseenter', (event) => {
 
 button.addEventListener('click', (event) => {
     let userInput = prompt("Enter a number");
+    grid(userInput);
 });
-
-
 
 const containerDiv = document.getElementById("container");
 
-for (let i = 0; i < 16; i++) {
-const row = document.createElement("div");
-containerDiv.appendChild(row);
-row.classList.add("row");
+function grid(input) {
+    if (input >= 100) {
+        alert("Enter a number under 100!!!");
+    } else{
+        for (let i = 0; i < input; i++) {
+            const row = document.createElement("div");
+            containerDiv.appendChild(row);
+            row.classList.add("row");
 
-for (let i = 0; i < 16; i++) {
+            for (let i = 0; i < input; i++) {
 
-const column = document.createElement("div");
-row.appendChild(column);
-column.classList.add("column");
-column.textContent = "column";
+            const column = document.createElement("div");
+            row.appendChild(column);
+            column.classList.add("column");
+            column.textContent = "column";
 
-column.addEventListener('mouseenter', (event) => {
-    column.classList.add("hoverColumn");
-    
-    column.addEventListener('mouseleave', (event) => {
-        column.classList.remove("hoverColumn");
-    });
-});
+            column.addEventListener('mouseenter', (event) => {
+                column.classList.add("hoverColumn");
+                
+                column.addEventListener('mouseleave', (event) => {
+                    column.classList.remove("hoverColumn");
+                });
+            });
+            }
+        }
+    }
 }
-}
-
 
 
