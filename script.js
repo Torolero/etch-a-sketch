@@ -21,6 +21,8 @@ button.addEventListener('click', (event) => {
 const containerDiv = document.getElementById("container");
 
 function grid(input) {
+    containerDiv.replaceChildren();
+
     if (input >= 100) {
         alert("Enter a number under 100!!!");
     } else{
