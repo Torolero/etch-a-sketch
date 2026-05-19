@@ -1,0 +1,1 @@
+/*Create divs with js to go inside div with ID "container" */
